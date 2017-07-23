@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
     <topbar></topbar>
     <tab></tab>
     <my-content></my-content>
@@ -11,7 +9,7 @@
 <script>
 import topbar from './components/topbar.vue'
 import tab from './components/tab.vue'
-import myContent from './components/content.vue'
+import myContent from './components/myContent.vue'
 
 export default {
   components: {

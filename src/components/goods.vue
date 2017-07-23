@@ -1,12 +1,15 @@
 <template>
-  <div class="content">
-  I am content!
+  <div class="goods">
+  	goods
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'goods'
+}
 </script>
+
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="less" scoped>
 </style>

@@ -1,8 +1,14 @@
 <template>
   <div class="tab">
-  	<div class="item-tab">商品</div>
-  	<div class="item-tab">评价</div>
-  	<div class="item-tab">商家</div>
+  	<div class="item-tab">
+  		<router-link :to='{ name: "goods" }'>商品</router-link>
+  	</div>
+  	<div class="item-tab">
+  		<router-link :to='{ name: "comments" }'>评价</router-link>
+  	</div>
+  	<div class="item-tab">
+  		<router-link :to='{ name: "business" }'>商家</router-link>
+  	</div>
   </div>
 </template>
 
