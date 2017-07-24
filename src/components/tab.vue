@@ -1,5 +1,5 @@
 <template>
-  <div class="tab">
+  <div class="tab border-1px">
   	<div class="item-tab">
   		<router-link :to='{ name: "goods" }'>商品</router-link>
   	</div>
@@ -28,6 +28,14 @@ export default {
 		.item-tab{
 			flex: 1;
 			text-align: center;
+      a{
+        display: block;
+        font-size: 14px;
+        color: rgb(77,85,93);
+      }
+      .router-link-active{
+        color: rgb(240, 20, 20);
+      }
 		}
 	}
 </style>
