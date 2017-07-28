@@ -3,8 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import vueResource from "vue-resource"
+import Element from 'element-ui'
 
 import base from '!vue-style-loader!css-loader!less-loader!./common/style/base.less'
+ 
+Vue.use(Element)
+
+Vue.use(vueResource)
 
 Vue.config.productionTip = false
 

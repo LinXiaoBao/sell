@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import goods from '@/components/goods'
-import comments from '@/components/comments'
-import business from '@/components/business'
+import goods from '@/components/goods/goods'
+import comments from '@/components/comments/comments'
+import business from '@/components/business/business'
 
 Vue.use(Router)
 

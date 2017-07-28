@@ -1,11 +1,11 @@
-.border-1px(@dpr: 1) {
+.border-1px(@dpr: 1, @bottom: 0) {
     .border-1px{
         position: relative;
         border: none;
         &:after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: @bottom;
             background: rgba(7,17,27,0.1);
             width: 100%;
             height: 1px;

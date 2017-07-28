@@ -1,11 +1,16 @@
 <template>
-    <div class="header">
-        I am header!
-    </div>
+  <div class="comments">
+  	comments
+  </div>
+  
 </template>
+
 <script>
-export default {}
+export default {
+  name: 'comments'
+}
 </script>
+
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="less" scoped>
 </style>

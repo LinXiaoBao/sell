@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import topbar from './components/topbar.vue'
-import tab from './components/tab.vue'
-import myContent from './components/myContent.vue'
+import topbar from './components/topbar/topbar.vue'
+import tab from './components/tab/tab.vue'
+import myContent from './components/myContent/myContent.vue'
 
 export default {
   components: {
@@ -28,6 +28,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
