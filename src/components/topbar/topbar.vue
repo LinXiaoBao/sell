@@ -62,7 +62,7 @@
 
                 </div>
                 <div class="close">
-                    <button type="button" name="close" @click='this.changFlag'>close</button>
+                    <i class="el-icon-close" @click="changFlag"></i>
                 </div>
             </div>
         </div>
@@ -77,19 +77,17 @@ export default {
     },
     data() {
             return {
-                seller: {},
-                flag: false
+                flag: false,
+                classMap : ['decrease', 'discount', 'guarantee', 'invoice', 'special']
             }
         },
         created() {
-            this.$http.get('/api/seller').then(response => {
-                this.seller = JSON.parse(response.bodyText).data;
-                console.log(this.seller);
-            }, response => {
-                // error callback
-            });
-            this.classMap = ['decrease', 'discount', 'guarantee', 'invoice', 'special']
-
+            this.$store.dispatch('fetchSeller');
+        },
+        computed: {
+            seller() {
+                return this.$store.state.seller
+            }
         },
         methods: {
             changFlag() {
@@ -111,6 +109,7 @@ export default {
     color: rgb(255, 255, 255);
     background-color: rgba(7, 17, 27, 0.2);
     font-weight: 200;
+    height: 134px;
     overflow: hidden;
     .content-wrapper {
         position: relative;
@@ -222,7 +221,7 @@ export default {
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 100;
+        z-index: 999;
         overflow: auto;
         background-color: rgba(7, 17, 27, 0.8);
         text-align: center;
@@ -300,13 +299,6 @@ export default {
                 position: absolute;
                 bottom: 0;
                 clear: both;
-                background: #999;
-                button {
-                    color: rgb(255, 255, 255);
-                    width: 100px;
-                    height: 30px;
-                    background: #999;
-                }
             }
         }
     }

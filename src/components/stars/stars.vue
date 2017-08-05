@@ -72,7 +72,7 @@ export default {
         .star-item {
             width: 15px;
             height: 15px;
-            margin-right: 16px;
+            margin-right: 5px;
             background-size: 15px 15px;
             &:last-child {
                 margin-right: 0;
@@ -91,7 +91,7 @@ export default {
     &.star-24 {
         .star-item {
             width: 10px;
-            height: 10;
+            height: 10px;
             margin-right: 3px;
             background-size: 10px 10px;
             &:last-child {
