@@ -26,8 +26,10 @@
 	    <div class="shopcart-list-wrapper" v-show="isShow">
 	    	<div class="shopcart-list">
 	    		<div class="list-header">
-	    			<h1 class="title">购物车</h1>
+	    			<h1 class="title ">购物车</h1>
+	    			<div class="empty-wrapper">
 	    			<span class="empty" @click='empty'>清空</span>
+	    			</div>
 	    		</div>
 	    		<div class="list-content">
 	    			<ul>
@@ -272,18 +274,23 @@ export default {
 				padding: 0 18px;
 				.title{
 					flex: 1;
+					display: inline;
 					font-size: 14px;
 					line-height: 40px;
 					color: rgb(7, 17, 27);
 					font-weight: 200;
 				}
-				.empty {
+				.empty-wrapper{
 					flex: 1;
 					text-align: right;
+					.empty {
+					display: inline;
 					font-size: 12px;
 					line-height: 40px;
 					color: rgb(0, 160, 220);
 				}
+				}
+				
 			}
 			.list-content{
 				font-size: 14px;
