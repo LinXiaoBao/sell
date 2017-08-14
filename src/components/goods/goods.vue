@@ -3,8 +3,9 @@
   		<div class="menu-box">
   			<div class="menu-wrapper">
   				<div 
-  					class="menu-item border-1px" 
-  					v-for='item in goods'>
+  					class="menu-item border-1px"
+  					v-for='item in goods'
+  					@click='menuItem'>
   					{{item.name}}
 				</div>
 	  		</div>
@@ -49,16 +50,21 @@
 <script>
 import cartcontrol from '../catrcontrol/cartcontrol.vue'
 export default {
+	name: 'goods',
 	components: {
 		cartcontrol
 	},
-  	name: 'goods',
   	created() {
   		this.$store.dispatch('fetchGoods');
 	},
 	computed: {
 		goods() {
 			return this.$store.state.goods
+		}
+	},
+	methods: {
+		menuItem() {
+			console.log('aa');
 		}
 	}
 }
